@@ -35,6 +35,9 @@ public class BaseEntity implements Serializable
     /** 备注 */
     private String remark;
 
+    /** 通知token */
+    private String pushplusToken;
+
     /** 请求参数 */
     private Map<String, Object> params;
 
@@ -96,6 +99,14 @@ public class BaseEntity implements Serializable
     public void setRemark(String remark)
     {
         this.remark = remark;
+    }
+
+    public String getPushplusToken() {
+        return pushplusToken;
+    }
+
+    public void setPushplusToken(String pushplusToken) {
+        this.pushplusToken = pushplusToken;
     }
 
     public Map<String, Object> getParams()

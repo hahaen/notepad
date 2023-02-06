@@ -295,6 +295,14 @@
             </el-form-item>
           </el-col>
         </el-row>
+
+        <el-row>
+          <el-col :span="24">
+            <el-form-item label="通知" prop="pushplusToken">
+              <el-input v-model="form.pushplusToken" placeholder="请输入通知 token" maxlength="200" />
+            </el-form-item>
+          </el-col>
+        </el-row>
         <el-row>
           <el-col :span="24">
             <el-form-item label="备注">
@@ -449,6 +457,9 @@ export default {
             message: "请输入正确的手机号码",
             trigger: "blur"
           }
+        ],
+        pushplusToken: [
+          { required: true, message: "通知不能为空", trigger: "blur" }
         ]
       }
     };
